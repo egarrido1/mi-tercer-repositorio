@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+
+<!-- Se le indica al body que cuando cargue con el (evento onload) debe mandar llamar a la función
+cargarApp -->
+<body onload="cargarApp()">
+
+   <!-- Crear un cabecero -->
+   <div class="cabecero">
+        <!-- Contenido del cabecero -->
+        <div class="presupuesto" id="presupuesto">
+            <div class="presupuesto_titulo">Presupuesto disponible</div>
+            <div class="presupuesto_valor" id="presupuesto_valor">+2,000.00</div>
+
+            <div class="presupuesto_ingreso limpiarEstilos" id="ingresos">
+                <div class="presupuesto_ingreso--texto">Ingresos</div>
+                <div class="derecha">
+                    <div class="presupuesto_ingreso--valor" id="ingresos_valor">+4,000.00</div>
+                    <div class="presupuesto_ingreso--porcentaje"></div>
+                </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos" id="egresos">
+                <div class="presupuesto_egreso--texto">Egresos</div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto_egreso--valor" id="egresos_valor">-1,900.00</div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">45%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Crear un formulario con un boton
+    Estos elementos forman un formulario para ingresar transacciones
+    financieras, permitiendo al usuario especificar el tipo de transacción,
+    una descripción y un valor numérico. -->
+
+    <form id="forma">
+        <div class="agregar">
+          <div class="agregar_contenedor">
+            <!-- Select crea un menu desplegable o selecto, el usuario
+            puede seleccionar una opción de la lista de opciones 
+            predefinidas, en este caso + o - -->
+            <select class="agregar_tipo" id="tipo">
+              <option value="ingreso" selected>+</option>
+              <option value="egreso">-</option>
+            </select>
+            <input type="text" class="agregar_descripcion" placeholder="Agregar descripción" id="descripcion">
+            <!--<input type="number" class="agregar_valor" value="valor" step="any">-->
+            <input type="number" class="agregar_valor" placeholder="valor" step="any">
+            <button class="agregar_btn">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    
+
+    <div class="contenedor limpiarEstilos">
+
+        <!-- Contenido del contenedor de ingreso -->
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+            
+            <div id="lista_ingresos" class="elemento limpiarEstilos">
+                <!-- Primer elemento de ingresos -->
+                <div class="elemento_descripcion">Salario</div>
+              
+                <div class="derecha limpiarEstilos">
+                    <!-- Valor del primer elemento de ingresos -->
+                    <div class="elemento_valor">+2,200.00</div>
+                
+                    <div class="elemento_eliminar">
+                        <button class="elemento_eliminar_btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="elemento limpiarEstilos">
+                <!-- Segundo elemento de ingresos -->
+                <div class="elemento_descripcion">Venta Coche</div>
+              
+                <div class="derecha limpiarEstilos">
+                    <!-- Valor del segundo elemento de ingresos -->
+                    <div class="elemento_valor">+1,500.00</div>
+                
+                    <div class="elemento_eliminar">
+                        <button class="elemento_eliminar_btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+         <!-- Contenido del contenedor de ingreso -->
+        <div class="egreso">
+            <h2 class="egreso_titulo">Egresos</h2>
+            
+            <div id="lista_egresos" class="elemento limpiarEstilos">
+                <!-- Primer elemento de egresos -->
+                <div class="elemento_descripcion">Renta departamento</div>
+              
+                <div class="derecha limpiarEstilos">
+                    <!-- Valor del primer elemento de egresos -->
+                    <div class="elemento_valor">-900.00</div>
+                    <div class="elemento_porcentaje">21%</div>
+                
+                    <div class="elemento_eliminar">
+                        <button class="elemento_eliminar_btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="elemento limpiarEstilos">
+                <!-- Segundo elemento de egresos -->
+                <div class="elemento_descripcion">Ropa</div>
+              
+                <div class="derecha limpiarEstilos">
+                    <!-- Valor del segundo elemento de egresos-->
+                    <div class="elemento_valor">-400.00</div>
+                    <div class="elemento_porcentaje">9%</div>
+                
+                    <div class="elemento_eliminar">
+                        <button class="elemento_eliminar_btn">
+                            <ion-icon name="close-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+    <script src="./js/dato.js" type="module"></script>
+    <script src="./js/ingreso.js" type="module"></script>
+    <script src="./js/egreso.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+   <!-- El botón con el icono de marca de verificación se utiliza para confirmar
+    la transacción.-->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+</html>
