@@ -1,4 +1,6 @@
-Presupuesto
+Proyecto Presupuesto (Curso JavaScript)
+Realizado por: Teresa Edith Garrido Rodríguez
+
 Un presupuesto JavaScript básico para gestionar ingresos y egresos. Ayuda a los usuarios a llevar un seguimiento de sus finanzas personales.
 
 Instalacion:
