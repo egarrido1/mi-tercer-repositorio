@@ -16,7 +16,7 @@ cargarApp -->
    <div class="cabecero">
         <!-- Contenido del cabecero -->
         <div class="presupuesto" id="presupuesto">
-            <div class="presupuesto_titulo">Presupuesto disponible</div>
+            <div class="presupuesto_titulo">Presupuesto Disponible</div>
             <div class="presupuesto_valor" id="presupuesto_valor">+2,000.00</div>
 
             <div class="presupuesto_ingreso limpiarEstilos" id="ingresos">
@@ -35,7 +35,6 @@ cargarApp -->
             </div>
         </div>
     </div>
-
 
     <!-- Crear un formulario con un boton
     Estos elementos forman un formulario para ingresar transacciones
@@ -62,21 +61,16 @@ cargarApp -->
         </div>
     </form>
     
-
+ <!-- Contenido del contenedor de ingreso -->
     <div class="contenedor limpiarEstilos">
-
-        <!-- Contenido del contenedor de ingreso -->
         <div class="ingreso">
             <h2 class="ingreso_titulo">Ingresos</h2>
             
              <div id="lista_ingresos" class="elemento limpiarEstilos">
              <!--    
                 <div class="elemento_descripcion">Salario</div>
-              
                 <div class="derecha limpiarEstilos">
-                     
                     <div class="elemento_valor">+2,200.00</div>
-                
                     <div class="elemento_eliminar">
                         <button class="elemento_eliminar_btn">
                             <ion-icon name="close-circle-outline"></ion-icon>
@@ -88,11 +82,9 @@ cargarApp -->
             <!--<div class="elemento limpiarEstilos">
                  Segundo elemento de ingresos 
                 <div class="elemento_descripcion">Venta Coche</div>
-              
                 <div class="derecha limpiarEstilos">
                  Valor del segundo elemento de ingresos
                     <div class="elemento_valor">+1,500.00</div>
-                
                     <div class="elemento_eliminar">
                         <button class="elemento_eliminar_btn">
                             <ion-icon name="close-circle-outline"></ion-icon>
@@ -105,48 +97,43 @@ cargarApp -->
          <!-- Contenido del contenedor de Egreso -->
         <div class="egreso">
             <h2 class="egreso_titulo">Egresos</h2>
-            
             <div id="lista_egresos" class="elemento limpiarEstilos">
-                <!-- Primer elemento de egresos -->
+                <!-- Primer elemento de egresos 
                 <div class="elemento_descripcion">Renta departamento</div>
-              
                 <div class="derecha limpiarEstilos">
-                    <!-- Valor del primer elemento de egresos -->
+                     Valor del primer elemento de egresos 
                     <div class="elemento_valor">-900.00</div>
                     <div class="elemento_porcentaje">21%</div>
-                
                     <div class="elemento_eliminar">
                         <button class="elemento_eliminar_btn">
                             <ion-icon name="close-circle-outline"></ion-icon>
                         </button>
                     </div>
-                </div>
+                </div>-->
             </div>
             
-            <div class="elemento limpiarEstilos">
-                <!-- Segundo elemento de egresos -->
+            <!--<div class="elemento limpiarEstilos">
+                 Segundo elemento de egresos 
                 <div class="elemento_descripcion">Ropa</div>
-              
                 <div class="derecha limpiarEstilos">
-                    <!-- Valor del segundo elemento de egresos-->
+                    Valor del segundo elemento de egresos
                     <div class="elemento_valor">-400.00</div>
                     <div class="elemento_porcentaje">9%</div>
-                
                     <div class="elemento_eliminar">
                         <button class="elemento_eliminar_btn">
                             <ion-icon name="close-circle-outline"></ion-icon>
                         </button>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
    
     <!-- Llamado a los archivos Javascript -->
-    <script type="module" src="./js/dato.js"></script>
-    <script type="module" src="./js/ingreso.js"></script>
-    <script type="module" src="./js/egreso.js"></script>
-    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/Dato.js"></script>    <!-- Llama a l archivo Dato.js    -->
+    <script type="module" src="./js/Ingreso.js"></script> <!-- Llama a l archivo Ingreso.js -->
+    <script type="module" src="./js/Egreso.js"></script>  <!-- Llama a l archivo Egreso.js  -->
+    <script type="module" src="./js/app.js"></script>     <!-- Llama a l archivo app.js     -->
 
    <!-- El botón con el icono de marca de verificación se utiliza para confirmar
     la transacción.-->

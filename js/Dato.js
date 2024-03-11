@@ -1,9 +1,13 @@
+// Archivo Dato.js
+
 // Define la clase Dato y hereda sus propiedades a Ingreso y Egreso.
-export default class Dato {
+export default class Dato { // La clase dato tiene un constructor y dos propiedades
     constructor (descripcion,valor) {
        this._descripcion=descripcion;
         this._valor=valor;
     }
+    // Los metódos get y set permiten obtener y establecer el valor de la propiedad
+    // "descripción"
     get descripcion() {
         return this._descripcion;
     }
@@ -16,6 +20,8 @@ export default class Dato {
             console.error(`Error: La descripcion debe ser un valor de tipo String.`);
         }
     }
+    // Los métodos get y set permiten obtener y establecer el valor de la propiedad
+    //  "valor"
     get valor() {
         return this._valor;
     }
